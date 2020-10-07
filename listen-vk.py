@@ -10,6 +10,7 @@ vk = vk_session.get_api()
 longpoll = VkBotLongPoll(vk_session, '192848017')
 
 
+
 def proccess_query(event):
     for command in command_enum.COMAND_ENUM:
         if event.obj.text == command:
