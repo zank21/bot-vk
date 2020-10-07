@@ -13,6 +13,7 @@ longpoll = VkBotLongPoll(vk_session, '192848017')
 
 def proccess_query(event):
     for command in command_enum.COMAND_ENUM:
+        print(1)
         if event.obj.text == command:
             response = command_enum.COMAND_ENUM[command]
             vk_session.method('messages.send', values={
