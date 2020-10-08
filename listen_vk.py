@@ -13,6 +13,7 @@ longpoll = VkBotLongPoll(vk_session, group_id)
 def listen():
     for event in longpoll.listen():
         if event.type == VkBotEventType.MESSAGE_NEW:
+            print(event.obj)
             handler_event.process(event)
 
 
